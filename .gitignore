@@ -2,3 +2,4 @@
 *.env
 Include/
 *.pem
+pyvenv.cfg
