@@ -26,11 +26,8 @@ class TwitterBot:
                         print(f"{time.strftime('%a %d,%b %Y')}\n")
                         tweet_id = dict(tweet._json)["id"]
                         tweet_tweet = dict(tweet._json)["text"]
-                        # name = dict(tweet._json)["user"]    #['screen_name']
                         print("id: " + str(tweet_id))
                         print("tweet: "+ str(tweet_tweet))
-                        # print(dir(tweet.user.follow))
-                        # print(f"Posted by: " +str(name))
                         self.api.retweet(tweet_id)
                     
                 except twitter.TweepError as err:
